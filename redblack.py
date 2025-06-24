@@ -1,5 +1,5 @@
 
-from rbtree import Node, RBTree, test
+from src.redblacktreepy import Node, RBTree, test
 
 if __name__ == '__main__':
     test()
@@ -13,5 +13,8 @@ if __name__ == '__main__':
     t.insert(Node(11))
     t.insert(Node(11))
     t.insert(Node(2))
+
+    print(t.get(Node(2)))
+    print(t.get(Node(3)))
 
     print(t)

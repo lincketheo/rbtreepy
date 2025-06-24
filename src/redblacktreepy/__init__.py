@@ -14,6 +14,10 @@ class Node:
         return self.value > node.value
 
     # You can override this
+    def equals(self, node):
+        return self.value == node.value
+
+    # You can override this
     def _label(self):
         return f"[{self.value} {self.color} {self.side}]"
 
@@ -112,6 +116,48 @@ class RBTree:
         else:                          
             parent.right = right
             right.side   = "RIGHT"
+
+    def get(self, node: Node):
+        if self.root is None:
+            return Node
+
+        else:
+            head = self.root 
+
+            # Insert
+            while True:
+                # Left
+                if head.equals(node):
+                    return node
+
+                elif head.compare_for_right(node):
+
+                    # Leaf
+                    if head.left is None:
+                        head.left = node 
+                        node.parent = head
+                        node.side = "LEFT"
+                        break
+
+                    # Continue
+                    else:
+                        head = head.left
+
+                # Right
+                else:
+
+                    # Leaf
+                    if head.right is None:
+                        head.right = node 
+                        node.parent = head
+                        node.side = "RIGHT"
+                        break
+
+                    # Continue
+                    else:
+                        head = head.right
+
+
 
     def insert(self, node: Node):
         node.color = "RED"
@@ -275,4 +321,4 @@ def test():
     verify_rb_tree(t)
 
 __all__ = ["Node", "RBTree", "verify_rb_tree", "test"]
-__version__ = "0.0.1"
+__version__ = "0.0.2"
