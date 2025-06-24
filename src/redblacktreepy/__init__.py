@@ -274,3 +274,5 @@ def test():
 
     verify_rb_tree(t)
 
+__all__ = ["Node", "RBTree", "verify_rb_tree", "test"]
+__version__ = "0.0.1"

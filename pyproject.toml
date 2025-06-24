@@ -3,15 +3,14 @@ requires = ["hatchling>=1.24"]
 build-backend = "hatchling.build"
 
 [project]
-name            = "rbtreetjl"
-version         = "0.1.0"
-description     = "Short one-liner"
+name            = "redblacktreepy"
+version         = "0.0.1"
+description     = "A Red Black Tree implementation in python"
 readme          = "README.md"
 license         = {text = "MIT"}
-authors         = [{name = "Your Name", email = "you@example.com"}]
+authors         = [{name = "Theo Lincke", email = "lincketheo@gmail.com"}]
 requires-python = ">=3.9"
-dependencies    = ["numpy>=1.26"]
 
 [project.urls]
-"Source" = "https://github.com/you/mypkg"
-"Docs"   = "https://your-site.io/mypkg"
+"Source" = "https://github.com/lincketheo/rbtreepy"
+"Docs"   = "https://github.com/lincketheo/rbtreepy"
